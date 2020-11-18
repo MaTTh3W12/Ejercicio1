@@ -1,17 +1,24 @@
-function EsPrimo(num) {
-    for(var i=2;i<=num-1;i++) {
-        if(num%i==0) {
-            return false;
+var cont = 1;
+var cont2 = 0;
+var bandera = 0;
+
+var x = prompt('Ingrese el numero para mostrarke los numeros primos');
+
+while (cont <= x) {
+    while (cont2 < cont) {
+        if (cont % cont2 == 0 && cont2 != 1 && cont2 != cont) {
+            bandera = 1;
         }
+        cont2 ++;
     }
-    return true;
-}
 
-for(var i=1;i<=20;i++) {
-
-    if(EsPrimo(i)) {
-        console.log("Es primo el numero ",i);
-    } else {
-        console.log("No es primo el numero ",i);
+    if (bandera == 0) {
+        document.write(cont2 + "<br/>")
     }
+    else{
+        bandera = 0;
+    }
+
+    cont++;
+    cont2 = 0;
 }
