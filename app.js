@@ -2,7 +2,7 @@ var cont = 1;
 var cont2 = 0;
 var bandera = 0;
 
-var x = prompt('Ingrese el numero para mostrarke los numeros primos');
+var x = prompt('Ingrese el numero para mostrarle los numeros primos');
 
 while (cont <= x) {
     while (cont2 < cont) {
